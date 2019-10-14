@@ -2,16 +2,24 @@
   "name": "testing3",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-scripts": "2.1.5"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.18",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.1.2",
+    "@testing-library/react": "^9.3.0",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "react-scripts": "3.2.0",
+    "typescript": "^3.6.4"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,9 +29,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "jest-dom": "^3.1.2",
-    "react-testing-library": "^6.1.2"
-  }
+  ]
 }
