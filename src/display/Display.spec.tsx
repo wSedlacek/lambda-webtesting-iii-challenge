@@ -13,19 +13,19 @@ test('shows closed when closed', async () => {
   expect(await findByText(/closed/i)).toBeInTheDocument();
 });
 
-test('shows open when opened', async () => {
-  const { findByText } = render(<Display />);
-  expect(await findByText(/open/i)).toBeInTheDocument();
+test('shows open when opened', () => {
+  const { getByText } = render(<Display />);
+  expect(getByText(/open/i)).toBeInTheDocument();
 });
 
-test('shows locked when locked', async () => {
-  const { findByText } = render(<Display closed locked />);
-  expect(await findByText(/locked/i)).toBeInTheDocument();
+test('shows locked when locked', () => {
+  const { getByText } = render(<Display closed locked />);
+  expect(getByText(/locked/i)).toBeInTheDocument();
 });
 
-test('shows unlocked when unlocked', async () => {
-  const { findByText } = render(<Display closed />);
-  expect(await findByText(/unlocked/i)).toBeInTheDocument();
+test('shows unlocked when unlocked', () => {
+  const { getByText } = render(<Display closed />);
+  expect(getByText(/unlocked/i)).toBeInTheDocument();
 });
 
 test('when `closed` use the `red-led` class', () => {

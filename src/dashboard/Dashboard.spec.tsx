@@ -8,14 +8,14 @@ test('renders without crashing', () => {
   expect(baseElement).toBeTruthy();
 });
 
-test('shows display', async () => {
-  const { findByText } = render(<Dashboard />);
-  expect(await findByText(/unlocked/i)).toBeInTheDocument();
-  expect(await findByText(/open/i)).toBeInTheDocument();
+test('shows display', () => {
+  const { getByText } = render(<Dashboard />);
+  expect(getByText(/unlocked/i)).toBeInTheDocument();
+  expect(getByText(/open/i)).toBeInTheDocument();
 });
 
 test('shows controls', async () => {
-  const { findByText } = render(<Dashboard />);
-  expect(await findByText(/lock gate/i)).toBeInTheDocument();
-  expect(await findByText(/close gate/i)).toBeInTheDocument();
+  const { getByText } = render(<Dashboard />);
+  expect(getByText(/lock gate/i)).toBeInTheDocument();
+  expect(getByText(/close gate/i)).toBeInTheDocument();
 });
